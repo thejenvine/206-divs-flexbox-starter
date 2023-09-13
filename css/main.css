@@ -104,21 +104,62 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  padding: 2em;
+  font-weight: 300;
+  padding: 3em 5em;
   color: #fff;
   height: 100%;
+  font-size: 1.25em;
+  justify-content: center;
 }
 
-.wrapper {
+header,
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+header h1 {
+  font-family: 'Hachi Maru Pop', cursive;
+  font-size: 3em;
+}
+
+h1 span {
+  font-size: .65em;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 3.6em;
+}
+
+main p {
+  font-size: 1.35em;
+}
+
+p span {
+  font-weight: 600;
+}
+
+footer {
+  border-top: 1px solid #fff;
+  font-size: .75em;
+  padding-top: 1em;
+}
+
+.flex-container {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
-  flex-flow: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
 }
 
-.div-1, .div-2, .div-3 {
+.flex-items {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
   justify-content: center;
@@ -126,9 +167,8 @@ body {
   color: #fff;
   background-color: #005250;
   line-height: 1.5em;
-  font-size: 1.25em;
-  height: auto;
-  /* width: 30%; */
+  font-size: 1em;
+  border-bottom: 1px solid #fff;
 }
 
 
@@ -214,14 +254,22 @@ body {
    Modify as content requires.
    ========================================================================== */
 
-@media all and (min-width: 1200px) {
-    .div-1, .div-2, .div-3 {
+@media all and (max-width: 768px) {
+    body {
+      padding: 1em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .flex-items {
       flex-basis: 30%;
+      border-bottom: none;
     }
 
-    .div-1, .div-2 {
-      border-right: 1px solid #fff;
-      padding-right: 30px;
+    #div-2 p {
+      border-left: 1px solid #2E8B80;
+      border-right: 1px solid #2E8B80;
+      padding: 0 40px;
     }
 }
 
